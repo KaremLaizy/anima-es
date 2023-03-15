@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TORNEIRA</title>
+    <style>
+    body
+    {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        margin: 0px;
+    }
+    .conteudo
+    {
+        width: 1000px;
+        height: 630px;
+        background-color: aqua;
+        position: relative;
+    }
+   .torneira
+    {
+        position: absolute;
+        z-index: 1;
+    }
+    .gota:hover
+            { animation: pinga 10s infinite;}
+
+    .gota
+    {
+        position: absolute;
+        top: 250px;
+        left: 300px;
+        z-index: 0;
+        animation: pinga 0.5s infinite;
+    }
+    @keyframes pinga{
+        0% {top: 250px;        }
+        100% {   top:  430px; opacity: 0;     }
+    }
+    </style>
+</head>
+<body>
+    <div class="conteudo">
+        <img src="torneira.png" class="torneira">
+        <img src="gota.png" class="gota">
+    </div>
+</body>
+</html>
